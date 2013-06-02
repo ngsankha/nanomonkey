@@ -6,13 +6,13 @@ var ANNOTATION_PATTERN = /@\w*/;
 var EXPRESSION_PATTERN = /\{(.*?)\}/;
 
 function parseBody(node) {
-    for (var i = 0; i < node.body.length; i++) {
+    for (var i = 0; node != undefined && i < node.body.length; i++) {
         switch (node.body[i].type) {
             case 'FunctionDeclaration':
                 node.body[i] = parseFunction(node.body[i]);
                 break;
         }
-        node.body[i] = parseBody(node.body[i]);
+        node.body[i].body = parseBody(node.body[i].body);
     }
     return node;
 }
