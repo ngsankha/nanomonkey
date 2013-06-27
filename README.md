@@ -4,6 +4,8 @@ A JavaScript to JavaScript experimental compiler.
 
 The Spec is available on the [wiki](https://github.com/sankha93/nanomonkey/wiki/Spec).
 
+---
+
 The aim of this compiler is to take annotated JavaScript source and then output JavaScript. The role of this compiler will be to help developers catch bugs, both by detecting bugs during compilation and by inserting runtime checks that will be executed only in debug mode.
 
 It can be used to add type-safety checks in a dynamic language like JavaScript.
